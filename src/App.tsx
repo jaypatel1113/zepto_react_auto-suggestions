@@ -1,9 +1,11 @@
-// App.tsx
 import { AnimatePresence, motion } from "framer-motion";
-import { useChipInput } from "./hooks/useChipInput";
+
+import Heading from "./components/Heading";
 import Chip from "./components/Chip";
-import { chipAnimation } from "./animations";
 import Suggestions from "./components/Suggestions";
+
+import { chipAnimation } from "./animations";
+import { useChipInput } from "./hooks/useChipInput";
 
 const App = () => {
     const {
@@ -22,9 +24,10 @@ const App = () => {
     } = useChipInput();
 
     return (
-        <div className="flex flex-col gap-8 font-sans p-5">
-            <div className="flex flex-wrap gap-2 items-center border-b-2 border-blue-600 pb-1 ">
+        <div className="flex flex-col gap-8 font-sans p-5 pt-10 items-center justify-start w-full">
+            <Heading />
 
+            <div className="flex flex-wrap gap-2 items-center border-b-2 border-blue-600 pb-1 max-w-6xl w-full ">
                 <AnimatePresence>
                     {chips.map((chip) => (
                         <motion.div
@@ -36,7 +39,7 @@ const App = () => {
                     ))}
                 </AnimatePresence>
 
-                <div className="relative" ref={contRef}>
+                <div className="relative flex-1 flex min-w-[200px]" ref={contRef}>
                     <input
                         ref={inputRef}
                         type="text"
@@ -45,7 +48,7 @@ const App = () => {
                         onKeyDown={handleInputKeyDown}
                         onFocus={() => setShowFilters(true)}
                         placeholder="Type here..."
-                        className="p-2 border-none outline-none"
+                        className="p-2 border-none outline-none flex-1 w-full"
                     />
                     
                     <Suggestions 

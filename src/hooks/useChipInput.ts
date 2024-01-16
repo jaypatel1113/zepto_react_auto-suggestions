@@ -1,5 +1,5 @@
-// useChipInput.ts
 import { useState, useEffect, useRef, KeyboardEvent, useMemo } from "react";
+
 import { Users } from "../constants";
 import type { Chip } from "../types";
 
@@ -45,13 +45,7 @@ export const useChipInput = () => {
         setHighlighted(null);
 
         setFilteredItems(
-            users.filter(
-                (item) =>
-                    !chips.find(
-                        (chip) =>
-                            chip.name.toLowerCase() === item.name.toLowerCase()
-                    ) && item.name.toLowerCase().includes(value.toLowerCase())
-            )
+            users.filter((item) => !chips.find((chip) => chip.name.toLowerCase() === item.name.toLowerCase()) && item.name.toLowerCase().includes(value.toLowerCase()))
         );
     };
 
