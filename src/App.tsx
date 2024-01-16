@@ -19,8 +19,8 @@ const App = () => {
         handleInputChange,
         handleInputKeyDown,
         addChip,
-        setShowFilters,
         removeChip,
+        handleFocus
     } = useChipInput();
 
     return (
@@ -46,7 +46,7 @@ const App = () => {
                         value={inputValue}
                         onChange={handleInputChange}
                         onKeyDown={handleInputKeyDown}
-                        onFocus={() => setShowFilters(true)}
+                        onFocus={handleFocus}
                         placeholder="Type here..."
                         className="p-2 border-none outline-none flex-1 w-full"
                     />

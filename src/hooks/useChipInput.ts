@@ -57,6 +57,7 @@ export const useChipInput = () => {
         ) {
             if (highlighted === null) {
                 setHighlighted(chips[chips.length - 1]);
+                inputRef.current?.blur();
             } else {
                 removeLastChip();
             }
@@ -83,6 +84,11 @@ export const useChipInput = () => {
         }
     };
 
+    const handleFocus = () => {
+        setShowFilters(true);
+        // setHighlighted(null);
+    } 
+
     return {
         inputValue,
         chips,
@@ -96,5 +102,6 @@ export const useChipInput = () => {
         addChip,
         removeChip,
         setShowFilters,
+        handleFocus
     };
 };

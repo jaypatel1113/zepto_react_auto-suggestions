@@ -9,7 +9,7 @@ type ChipProps = {
 
 const Chip = ({ chip, highlight, handleClick }: ChipProps) => {
     return (
-        <div className={`rounded-full flex gap-1 items-center border-2 ${highlight ? "bg-[#ccc] border-blue-600" : "bg-[#dfdfdf] border-[#dfdfdf]"}`}>
+        <div className={`rounded-full flex gap-1 items-center border-2 ${highlight ? "bg-[#ccc] border-blue-600" : "bg-[#eee] border-[#eee]"}`}>
             <img
                 src={chip.avatar}
                 alt={chip.name}

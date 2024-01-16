@@ -10,7 +10,7 @@ type SuggestionProps = {
 const Suggestions = ({showFilters, filteredItems, inputValue, addChip}: SuggestionProps) => {
     return (
         <div
-            className={`absolute top-[calc(100%+6px)] min-w-max left-0 bg-gray-200  overflow-y-auto [&::-webkit-scrollbar]:hidden z-10 ${showFilters ? "max-h-80" : "max-h-0"} transition-all duration-200`}
+            className={`absolute top-[calc(100%+6px)] min-w-max left-0 bg-[#ededed]  overflow-y-auto [&::-webkit-scrollbar]:hidden z-10 ${showFilters ? "max-h-80" : "max-h-0"} transition-all duration-200`}
         >
             {filteredItems.map((item) => {
                 const startIndex = item.name.toLowerCase().indexOf(inputValue.toLowerCase());
