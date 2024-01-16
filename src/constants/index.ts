@@ -1,6 +1,4 @@
-// constants.js
-
-import { Chip } from "../App";
+import type { Chip } from "../types";
 
 export const Users: Chip[] = [
     {
