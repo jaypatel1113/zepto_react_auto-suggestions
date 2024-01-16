@@ -24,7 +24,7 @@ const App = () => {
     } = useChipInput();
 
     return (
-        <div className="flex flex-col gap-8 font-sans p-5 pt-10 items-center justify-start w-full">
+        <div className="flex flex-col gap-8 font-sans p-5 pt-10 items-center justify-start w-full overflow-x-hidden">
             <Heading />
 
             <div className="flex flex-wrap gap-2 items-center border-b-2 border-blue-600 pb-1 max-w-6xl w-full ">
